@@ -13,9 +13,9 @@ import sys
 import subprocess
 
 
-FFPROBE = shutil.which('ffprobe')
-if not FFPROBE:
-    raise FileNotFoundError('FFPROBE not found')
+#FFPROBE = shutil.which('ffprobe')
+#if not FFPROBE:
+#    raise FileNotFoundError('FFPROBE not found')
 
 
 # %% Asynchronous FFprobe
@@ -49,7 +49,7 @@ async def get_meta(filein: Path) -> dict:
 
 def ffprobe_sync(filein) -> dict:
     """ get media metadata """
-    assert isinstance(FFPROBE, str)
+#    assert isinstance(FFPROBE, str)
 
     meta = subprocess.check_output([FFPROBE, '-v', 'warning',
                                     '-print_format', 'json',
