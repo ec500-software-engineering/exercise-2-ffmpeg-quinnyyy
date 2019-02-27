@@ -1,6 +1,5 @@
 import queue
 import threading
-import subprocess
 from ffmpeg import encode
 
 def queue_vids(files, function):
