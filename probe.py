@@ -13,9 +13,9 @@ import sys
 import subprocess
 
 
-#FFPROBE = shutil.which('ffprobe')
-#if not FFPROBE:
-#    raise FileNotFoundError('FFPROBE not found')
+FFPROBE = shutil.which('ffprobe')
+if not FFPROBE:
+    raise FileNotFoundError('FFPROBE not found')
 
 
 # %% Asynchronous FFprobe
