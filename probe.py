@@ -56,6 +56,6 @@ def ffprobe_sync(filein) -> dict:
                                     '-show_streams',
                                     '-show_format',
                                     filein],
-                                   text=True)
+                                   universal_newlines=True)
 
     return json.loads(meta)
