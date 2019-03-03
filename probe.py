@@ -49,7 +49,7 @@ async def get_meta(filein: Path) -> dict:
 
 def ffprobe_sync(filein) -> dict:
     """ get media metadata """
-#    assert isinstance(FFPROBE, str)
+    assert isinstance(FFPROBE, str)
 
     meta = subprocess.check_output([FFPROBE, '-v', 'warning',
                                     '-print_format', 'json',
