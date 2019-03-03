@@ -1,7 +1,7 @@
 import subprocess
 from pathlib import Path
-import sys
-from time import time
+#import sys
+#from time import time
 
 def encode(file: Path) -> dict:
     vid_720p = "ffmpeg -i " + file[2:] + " -b:v 2M -r 30 -s hd720 hd720" + file[2:]
