@@ -47,7 +47,7 @@ async def get_meta(filein: Path) -> dict:
 # %% synchronous FFprobe
 
 
-def ffprobe_sync(filein) -> dict:
+def ffprobe_sync(filein: Path) -> dict:
     """ get media metadata """
     assert isinstance(FFPROBE, str)
 
@@ -55,7 +55,7 @@ def ffprobe_sync(filein) -> dict:
                                     '-print_format', 'json',
                                     '-show_streams',
                                     '-show_format',
-                                    filein],
-                                   universal_newlines=True)
+                                    str(filein)],
+                                   text=True)
 
     return json.loads(meta)
