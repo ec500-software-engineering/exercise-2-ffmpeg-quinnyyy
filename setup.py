@@ -1,3 +1,6 @@
-#!/usr/bin/env python
-import setuptools
-setuptools.setup()
+from setuptools import setup
+
+setup(
+    name='exercise2',
+    install_requires=["flake8","pytest"]
+)
